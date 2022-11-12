@@ -1,0 +1,68 @@
+/**
+ * You can edit, run, and share this code.
+ * play.kotlinlang.org
+ */
+fun main() {
+    val price_beras = 11000
+	val price_gula = 12000
+    val price_kacang = 5000
+    val price_tepung = 5000
+    
+    val stok_beras = 11
+    val stok_gula = 13
+    val stok_kacang = 7
+    val stok_tepung = 2*100 
+    
+    
+    val jumlah_beli_beras = 10
+    val jumlah_beli_gula = 10
+    val jumlah_beli_kacang = 6
+    val jumlah_beli_tepung = 75
+    
+    val beli_beras = price_beras*10 
+    val beli_gula = price_gula*5
+    val beli_kacang = price_kacang*10 
+    val beli_tepung = price_tepung*5
+    val tot_beli = beli_beras + beli_gula + beli_kacang + beli_tepung
+    
+    val uang = 160000
+    val kembalian = uang-tot_beli
+    
+    
+    
+    if (jumlah_beli_beras>stok_beras || jumlah_beli_gula>stok_gula || jumlah_beli_kacang>stok_kacang || jumlah_beli_tepung>stok_tepung){
+        println("Stock Kurang")
+    }else if (jumlah_beli_beras>stok_beras && jumlah_beli_gula<stok_gula && jumlah_beli_kacang>stok_kacang && jumlah_beli_tepung>stok_tepung){
+        println("Stock Kurang")
+    }else if(jumlah_beli_beras<=stok_beras && jumlah_beli_gula<=stok_gula && jumlah_beli_kacang<=stok_kacang && jumlah_beli_tepung<=stok_tepung){
+        if (uang < tot_beli) {
+            val diskon = uang*0.25
+            
+            println("Total Pembelian Budi = Rp."+tot_beli)
+            println ("Diskon Pelanggan Tetap (25%) = " +diskon)
+            val after_disc = tot_beli-diskon
+            println ("Harga setelah Diskon = " +after_disc)
+            println ("Jumlah Bayar = Rp."+uang)
+  			println("Uang Budi Kurang")
+        }else if (uang == tot_beli){
+            val diskon = uang*0.25
+            
+            println("Total Pembelian Budi = Rp."+tot_beli)
+            println ("Diskon Pelanggan Tetap (25%) = " +diskon)
+            val after_disc = tot_beli-diskon
+            println ("Harga setelah Diskon = " +after_disc)
+            println ("Jumlah Bayar = Rp."+uang)
+            println("Uang Budi Pas")
+        }else if (uang > tot_beli){
+            val diskon = uang*0.25
+            
+            println("Total Pembelian Budi = Rp."+tot_beli)
+            println ("Diskon Pelanggan Tetap (25%) = " +diskon)
+            val after_disc = tot_beli-diskon
+            println ("Harga setelah Diskon = " +after_disc)
+            println ("Jumlah Bayar = Rp."+uang)
+            println ("Kembalian = Rp."+kembalian)
+        }
+    }
+    
+}
