@@ -1,0 +1,20 @@
+/**
+ * You can edit, run, and share this code.
+ * play.kotlinlang.org
+ */
+class Car(var merek: String, var model: String, var tahun: Int) {
+	//Class Function
+	fun drive() {
+    	println("ok")    
+    }
+}
+
+fun main() {
+    val c1 = Car("Ford", "Mustang", 1969)
+    
+    //Print Property Values
+    println(c1.merek + " "+ c1.model + " "+ c1.tahun)
+    
+    // Call the function
+    c1.drive()
+}
