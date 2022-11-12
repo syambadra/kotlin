@@ -19,10 +19,10 @@ fun main() {
     val jumlah_beli_kacang = 6
     val jumlah_beli_tepung = 75
     
-    val beli_beras = price_beras*10 
-    val beli_gula = price_gula*5
-    val beli_kacang = price_kacang*10 
-    val beli_tepung = price_tepung*5
+    val beli_beras = price_beras*jumlah_beli_beras
+    val beli_gula = price_gula*jumlah_beli_gula
+    val beli_kacang = price_kacang*jumlah_beli_kacang 
+    val beli_tepung = price_tepung*jumlah_beli_tepung
     val tot_beli = beli_beras + beli_gula + beli_kacang + beli_tepung
     
     val uang = 160000
